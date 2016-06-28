@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ExpressYourself
@@ -15,14 +16,33 @@ namespace ExpressYourself
         /// <returns>the title string if it exists</returns>
         public static string GetTitle(string str)
         {
-            // TODO
-            return "";
+            var titleExpression = new Regex(@"Title\: (.*),+");
+            var match = titleExpression.Match(str);
+            if(!match.Success)
+            {
+                return "Title not found";
+            }
+            else
+            {
+                return match.Groups[1].Value;
+            }
         }
 
         public static string GetType(string str)
         {
             // TODO
-            return "";
+            var typeExpression = new Regex(@"Type\: (.*),T+");
+            var match = typeExpression.Match(str);
+            if (!match.Success)
+            {
+                return "Type not found";
+            }
+            else
+            {
+                return match.Groups[1].Value;
+            }
+
+            //return "";
         }
 
         public static string GetLength(string str)

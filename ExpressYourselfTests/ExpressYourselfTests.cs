@@ -10,19 +10,19 @@ namespace ExpressYourself.Test
     [TestFixture]
     public class ExpressYourselfTest
     {
-        //[TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = "The Count of Monte Cristo")]
-        //[TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = "People")]
-        //[TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = "Pride & Prejudice")]
-        //[TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = "Avatar")]
+        [TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = "The Count of Monte Cristo")]
+        [TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = "People")]
+        [TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = "Pride & Prejudice")]
+        [TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = "Avatar")]
         public string GetTitle(string str)
         {
             return Parser.GetTitle(str);
         }
 
-        //[TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = "Book")]
-        //[TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = "Magazine")]
-        //[TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = "Book")]
-        //[TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = "DVD")]
+        [TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = "Book")]
+        [TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = "Magazine")]
+        [TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = "Book")]
+        [TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = "DVD")]
         public string GetType(string str)
         {
             return Parser.GetType(str);
