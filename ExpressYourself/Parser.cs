@@ -46,7 +46,7 @@ namespace ExpressYourself
         public static string GetLength(string str)
         {
             // TODO
-            var lengthExpression = new Regex(@"Length: (.*(ges|m))");
+            var lengthExpression = new Regex(@"Length: (.*)");
             var match = lengthExpression.Match(str);
             if (!match.Success)
             {
