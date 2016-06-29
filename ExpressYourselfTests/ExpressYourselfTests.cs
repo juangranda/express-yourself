@@ -28,10 +28,10 @@ namespace ExpressYourself.Test
             return Parser.GetType(str);
         }
 
-        //[TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = "928 pages")]
-        //[TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = "50 pages")]
-        //[TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = "272 pages")]
-        //[TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = "2h 42m")]
+        [TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = "928 pages")]
+        [TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = "50 pages")]
+        [TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = "272 pages")]
+        [TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = "2h 42m")]
         public string GetLength(string str)
         {
             return Parser.GetLength(str);

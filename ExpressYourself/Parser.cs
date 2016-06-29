@@ -41,14 +41,23 @@ namespace ExpressYourself
             {
                 return match.Groups[1].Value;
             }
-
-            //return "";
         }
 
         public static string GetLength(string str)
         {
             // TODO
-            return "";
+            var lengthExpression = new Regex(@"Length: (.*(ges|m))");
+            var match = lengthExpression.Match(str);
+            if (!match.Success)
+            {
+                return "Lentgh not found";
+            }
+            else
+            {
+                return match.Groups[1].Value;
+            }
+
+           // return "";
         }
 
         public static bool IsValidLine(string str)
