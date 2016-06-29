@@ -31,7 +31,7 @@ namespace ExpressYourself
         public static string GetType(string str)
         {
             // TODO
-            var typeExpression = new Regex(@"Type\: (.*),T+");
+            var typeExpression = new Regex(@"Type: (.*),T");
             var match = typeExpression.Match(str);
             if (!match.Success)
             {
