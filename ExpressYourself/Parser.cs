@@ -61,18 +61,16 @@ namespace ExpressYourself
         public static bool IsValidLine(string str)
         {
             // TODO
-            var isValidExpression = new Regex("\\w.* \"");
+            var isValidExpression = new Regex(@"Type: .*,Title.*Length.*");
             var match = isValidExpression.Match(str);
             if (!match.Success)
             {
                 return false;
-
             }
             else
             {
                 return true;
             }
-            //return false;
         }
     }
 }

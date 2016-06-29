@@ -37,10 +37,10 @@ namespace ExpressYourself.Test
             return Parser.GetLength(str);
         }
 
-        //[TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = true)]
-        //[TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = true)]
-        //[TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = true)]
-        //[TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = true)]
+        [TestCase("Type: Book,Title: The Count of Monte Cristo,Length: 928 pages", ExpectedResult = true)]
+        [TestCase("Type: Magazine,Title: People,Length: 50 pages", ExpectedResult = true)]
+        [TestCase("Type: Book,Title: Pride & Prejudice,Length: 272 pages", ExpectedResult = true)]
+        [TestCase("Type: DVD,Title: Avatar,Length: 2h 42m", ExpectedResult = true)]
         [TestCase("Avatar", ExpectedResult = false)]
         [TestCase("Type: DVD", ExpectedResult = false)]
         [TestCase("Type: DVD Title: Avatar Length: 2h 42m", ExpectedResult = false)]
