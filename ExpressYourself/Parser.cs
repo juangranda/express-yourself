@@ -56,14 +56,23 @@ namespace ExpressYourself
             {
                 return match.Groups[1].Value;
             }
-
-           // return "";
         }
 
         public static bool IsValidLine(string str)
         {
             // TODO
-            return false;
+            var isValidExpression = new Regex("\\w.* \"");
+            var match = isValidExpression.Match(str);
+            if (!match.Success)
+            {
+                return false;
+
+            }
+            else
+            {
+                return true;
+            }
+            //return false;
         }
     }
 }
